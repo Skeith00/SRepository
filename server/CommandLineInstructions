@@ -1,0 +1,58 @@
+Para la ejecucion en linea de comandos, introducir las siguientes instrucciones por consola.
+
+Listado parkings abiertos actualmente
+START http://localhost:8080/myapp/myservices/allparkings
+
+parametros
+
+?completo=false
+?dia=DD.MM.YYYY#hh
+
+Ej: START http://localhost:8080/myapp/myservices/allparkings
+Ej: START http://localhost:8080/myapp/myservices/allparkings?completo=false
+Ej: START http://localhost:8080/myapp/myservices/allparkings?dia=10.10.2016#10
+
+Desocupa una plaza de parking
+START http://localhost:8080/myapp/myservices/liberateparkings
+
+parametros
+
+?id=1
+
+Ej: START http://localhost:8080/myapp/myservices/liberateparkings?id=1
+
+Desocupa una plaza de parking
+START http://localhost:8080/myapp/myservices/occupyparking
+
+parametros
+?id=1
+
+Ej: START http://localhost:8080/myapp/myservices/occupyparking?id=1
+
+Modifica un parking(unico parametro requerido es id, el resto seran campos a modificar)
+START http://localhost:8080/myapp/myservices/modify
+?id
+?name
+?openingTime
+?closingTime
+?totalPlaces
+?FreePlaces
+?openDays
+?latitudeGPS
+?longitudeGPS
+
+Ej: START http://localhost:8080/myapp/myservices/modify?id=1^&name=ParkingValencia^&openingTime=1100
+
+Añade un nuevo parking(todos los parametros son requeridos)
+START http://localhost:8080/myapp/myservices/add
+
+?name=ParkingVlencia
+?openingTime=1000
+?closingTime=2000
+?totalPlaces=30
+?FreePlaces=10
+?openDays=LMXJVSD
+?latitudeGPS=85.65
+?longitudeGPS=74.85
+
+Ej: START http://localhost:8080/myapp/myservices/add?name=ParkingValencia^&openingTime=1000^&closingTime=2000^&totalPlaces=30^&FreePlaces=10^&openDays=LMXJVSD^&latitudeGPS=85.65^&longitudeGPS=74.85

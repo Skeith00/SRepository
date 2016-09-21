@@ -1,0 +1,162 @@
+Found a 14 line (58 tokens) duplication in the following files: 
+Starting at line 95 of C:\Users\Sergi\server\src\main\java\serverparking\MyServices.java
+Starting at line 180 of C:\Users\Sergi\server\src\main\java\serverparking\MyServices.java
+
+        	}
+    		return Response
+    				   .status(0)
+    				   .entity("Nonexistent parking").build(); 
+        }catch(Exception e){
+    		return Response
+ 				   .status(0)
+ 				   .entity(e.toString()).build();
+        }
+	}
+    
+    @GET
+    @Produces(MediaType.TEXT_PLAIN)
+    @Path("allparkings")
+=====================================================================
+Found a 9 line (41 tokens) duplication in the following files: 
+Starting at line 85 of C:\Users\Sergi\server\src\test\java\serverparking\MyServicesTest.java
+Starting at line 94 of C:\Users\Sergi\server\src\test\java\serverparking\MyServicesTest.java
+
+    	Response response = target.path("myservices/liberateparkings").
+		queryParam("id", "1").
+		request(MediaType.TEXT_PLAIN).
+		get();
+		String responseStr = response.readEntity(String.class);
+		System.out.println(responseStr);
+	}
+    
+    public void occupyParkingTest(){
+=====================================================================
+Found a 3 line (41 tokens) duplication in the following files: 
+Starting at line 118 of C:\Users\Sergi\server\src\main\java\serverparking\MyServices.java
+Starting at line 124 of C:\Users\Sergi\server\src\main\java\serverparking\MyServices.java
+
+	    			if(parking.getFreePlaces()>0)
+	    				listAllParkings += parking.getId() + ". " +parking.getName()+" | From "+parking.getOpeningTime()+" till "+parking.closingTime+" : "+parking.getOpenDays()+"\n";
+	    		}
+=====================================================================
+Found a 3 line (41 tokens) duplication in the following files: 
+Starting at line 125 of C:\Users\Sergi\server\src\main\java\serverparking\MyServices.java
+Starting at line 129 of C:\Users\Sergi\server\src\main\java\serverparking\MyServices.java
+
+	    		    		listAllParkings += parking.getId() + ". " +parking.getName()+" | From "+parking.getOpeningTime()+" till "+parking.closingTime+" : "+parking.getOpenDays()+"\n";
+	    			}
+	    		}
+=====================================================================
+Found a 2 line (40 tokens) duplication in the following files: 
+Starting at line 119 of C:\Users\Sergi\server\src\main\java\serverparking\MyServices.java
+Starting at line 129 of C:\Users\Sergi\server\src\main\java\serverparking\MyServices.java
+
+	    				listAllParkings += parking.getId() + ". " +parking.getName()+" | From "+parking.getOpeningTime()+" till "+parking.closingTime+" : "+parking.getOpenDays()+"\n";
+	    		}
+=====================================================================
+Found a 5 line (40 tokens) duplication in the following files: 
+Starting at line 165 of C:\Users\Sergi\server\src\main\java\serverparking\MyServices.java
+Starting at line 194 of C:\Users\Sergi\server\src\main\java\serverparking\MyServices.java
+
+    	try{
+	    	for(Parking parking : pList){
+	    		if(parking.getId() == id){
+	    			if(parking.getFreePlaces()>0){
+	    				parking.setFreePlaces(parking.getFreePlaces()+1);
+=====================================================================
+Found a 8 line (36 tokens) duplication in the following files: 
+Starting at line 95 of C:\Users\Sergi\server\src\test\java\serverparking\MyServicesTest.java
+Starting at line 103 of C:\Users\Sergi\server\src\test\java\serverparking\MyServicesTest.java
+Starting at line 112 of C:\Users\Sergi\server\src\test\java\serverparking\MyServicesTest.java
+
+		queryParam("id", "1").
+		request(MediaType.TEXT_PLAIN).
+		get();
+		String responseStr = response.readEntity(String.class);
+		System.out.println(responseStr);
+	}
+    
+    public void getParkingsTest(){
+=====================================================================
+Found a 6 line (34 tokens) duplication in the following files: 
+Starting at line 48 of C:\Users\Sergi\server\src\test\java\serverparking\MyServicesTest.java
+Starting at line 64 of C:\Users\Sergi\server\src\test\java\serverparking\MyServicesTest.java
+
+		queryParam("name", "TarragonaParking").
+		queryParam("openingTime", "900").
+		queryParam("closingTime", "2100").
+		queryParam("totalPlaces", "50").
+		queryParam("FreePlaces", "10").
+		queryParam("openDays", "VSD").
+=====================================================================
+Found a 8 line (34 tokens) duplication in the following files: 
+Starting at line 55 of C:\Users\Sergi\server\src\test\java\serverparking\MyServicesTest.java
+Starting at line 77 of C:\Users\Sergi\server\src\test\java\serverparking\MyServicesTest.java
+Starting at line 86 of C:\Users\Sergi\server\src\test\java\serverparking\MyServicesTest.java
+Starting at line 95 of C:\Users\Sergi\server\src\test\java\serverparking\MyServicesTest.java
+Starting at line 103 of C:\Users\Sergi\server\src\test\java\serverparking\MyServicesTest.java
+Starting at line 112 of C:\Users\Sergi\server\src\test\java\serverparking\MyServicesTest.java
+
+		queryParam("longitudeGPS", "74.25").
+		request(MediaType.TEXT_PLAIN).
+		get();
+		String responseStr = response.readEntity(String.class);
+		System.out.println(responseStr);
+	}
+    
+    public void modifyFormTest(){    	    	
+=====================================================================
+Found a 7 line (34 tokens) duplication in the following files: 
+Starting at line 98 of C:\Users\Sergi\server\src\main\java\serverparking\MyServices.java
+Starting at line 134 of C:\Users\Sergi\server\src\main\java\serverparking\MyServices.java
+Starting at line 183 of C:\Users\Sergi\server\src\main\java\serverparking\MyServices.java
+
+    				   .entity("Nonexistent parking").build(); 
+        }catch(Exception e){
+    		return Response
+ 				   .status(0)
+ 				   .entity(e.toString()).build();
+        }
+	}
+=====================================================================
+Found a 6 line (32 tokens) duplication in the following files: 
+Starting at line 55 of C:\Users\Sergi\server\src\test\java\serverparking\MyServicesTest.java
+Starting at line 77 of C:\Users\Sergi\server\src\test\java\serverparking\MyServicesTest.java
+Starting at line 86 of C:\Users\Sergi\server\src\test\java\serverparking\MyServicesTest.java
+Starting at line 95 of C:\Users\Sergi\server\src\test\java\serverparking\MyServicesTest.java
+Starting at line 103 of C:\Users\Sergi\server\src\test\java\serverparking\MyServicesTest.java
+Starting at line 112 of C:\Users\Sergi\server\src\test\java\serverparking\MyServicesTest.java
+Starting at line 121 of C:\Users\Sergi\server\src\test\java\serverparking\MyServicesTest.java
+
+		queryParam("longitudeGPS", "74.25").
+		request(MediaType.TEXT_PLAIN).
+		get();
+		String responseStr = response.readEntity(String.class);
+		System.out.println(responseStr);
+	}
+=====================================================================
+Found a 6 line (29 tokens) duplication in the following files: 
+Starting at line 53 of C:\Users\Sergi\server\src\main\java\serverparking\MyServices.java
+Starting at line 98 of C:\Users\Sergi\server\src\main\java\serverparking\MyServices.java
+Starting at line 134 of C:\Users\Sergi\server\src\main\java\serverparking\MyServices.java
+Starting at line 183 of C:\Users\Sergi\server\src\main\java\serverparking\MyServices.java
+
+    		pList.add(newParking);
+        }catch(Exception e){
+    		return Response
+    				   .status(0)
+    				   .entity(e.toString()).build();
+    	}
+=====================================================================
+Found a 8 line (25 tokens) duplication in the following files: 
+Starting at line 177 of C:\Users\Sergi\server\src\main\java\serverparking\MyServices.java
+Starting at line 206 of C:\Users\Sergi\server\src\main\java\serverparking\MyServices.java
+
+	 	    				   .entity("All the parkings are allready free").build();
+	    			}
+	    		}
+	    	}
+			return Response
+					   .status(0)
+					   .entity("Nonexistent parking").build();
+    	}catch(Exception e){
