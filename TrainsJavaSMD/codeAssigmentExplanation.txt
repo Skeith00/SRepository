@@ -1,0 +1,14 @@
+Java 1.7
+
+Code Assignment -  Trains
+
+RailNetwork is the graph, Route is the edge, and Town is the node.
+The edges are unidireccional, so the class Route only point to the destination node, and the Towns contains all the Routes out.
+
+The class RailwayBuilder is used to start the aplication and create the whole graph.
+
+Each service implements a different funcionality, as asked for in the assigment. Filters are used to paramtrize the search of the services.
+
+RailwayReader is the class used to read from the txt file, if we don't want to enter the initial values by variable. The route is hardcoded in the "txtRoutesFile" var, within TestRailNetwork(Unit testing class).
+
+I've developed the exercise thinking like if all inputs are made by plain text.
