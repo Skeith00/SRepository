@@ -1,0 +1,72 @@
+<html>
+<head>
+	<style type="text/css">
+		.is-loading {background:red;}
+	</style>
+</head>
+<body>
+<div id="root">
+	<!--<ul>
+		<li v-for="name in names" v-text="name"></li>
+	</ul>
+	<input id="input" type="text" v-model="newName">
+	<button @click="addName" @title="title">Add Name</button>-->
+	<button :class="{ 'is-loading': isLoading }" @click="toggleClass">Click Me</button>
+	<button :disabled="enabled">Enable Me</button>
+
+	<h1>All Tasks</h1>
+	<ul>
+		<li v-for="task in tasks" v-text="task.description"></li>
+	</ul>
+	<h1>Incomplete Tasks</h1>
+	<ul>
+		<li v-for="task in incompleteTasks" v-text="task.description"></li>
+	</ul>
+	
+	
+</div>
+<script src="https://unpkg.com/vue@2.5.2/dist/vue.js"></script>
+
+<script> 
+ new Vue({
+	el: '#root',
+	/*methods :{
+		addName: function() {
+			this.names.push(this.newName);
+			this.newName ='';
+		}
+	},
+	data: {
+		newName: '',
+		names: ['Joe', 'Mary', 'Jane', 'Jack']
+	}*/
+	data: {
+		isLoading: false,
+		enabled: true,
+		title: 'Now the title is being set thru JS',
+		
+		tasks: [
+			{ description: "Go to the store", completed: true},
+			{ description: "Finish screencast", completed: false},
+			{ description: "Clear inbox", completed: false},
+			{ description: "Clean room", completed: true}
+		]
+	},
+	computed: {
+		incompleteTasks() {
+			return this.tasks.filter(task => !task.completed)
+		}
+	},
+	methods: {
+		toggleClass: function() {
+			this.isLoading = true;
+		},
+		enableButton: function() {
+			this.enabled = true;
+		}
+	}
+ })
+</script>
+
+</body>
+</html>
